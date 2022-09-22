@@ -1,0 +1,63 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
+    integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js"
+    integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz"
+    crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            // customised options
+            // • auto-render specific keys, e.g.:
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            // • rendering keys, e.g.:
+            throwOnError: false
+        });
+    });
+</script>
+
+<style>
+    .katex-version {
+        display: none;
+    }
+
+    .katex-version::after {
+        content: "0.10.2 or earlier";
+    }
+</style>
+<span class="katex">
+    <span class="katex-mathml">The KaTeX stylesheet is not loaded!</span>
+    <span class="katex-version rule">KaTeX stylesheet version: </span>
+</span><h1>Maxwell's Equations</h1>
+<table>
+<thead>
+<tr>
+<th>equation</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\nabla \cdot \vec{\mathbf{B}}  = 0$</td>
+<td>divergence of $\vec{\mathbf{B}}$ is zero</td>
+</tr>
+<tr>
+<td>$\nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t}  = \vec{\mathbf{0}}$</td>
+<td>curl of $\vec{\mathbf{E}}$ is proportional to the rate of change of $\vec{\mathbf{B}}$</td>
+</tr>
+<tr>
+<td>$\nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} = \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} = 4 \pi \rho$</td>
+<td><em>wha?</em></td>
+</tr>
+</tbody>
+</table>
+<p><img src="http://i.giphy.com/Gty2oDYQ1fih2.gif" alt="electricity"></p>
