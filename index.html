@@ -1,5 +1,10 @@
 <!doctype html>
 <meta charset="utf-8">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="./custom.css">
+
+<!-- KaTeX -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css"
     integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js"
@@ -25,19 +30,55 @@
     });
 </script>
 
-<style>
-    .katex-version {
-        display: none;
-    }
+<!-- Distill template -->
+<script src="./lib/template.v1.js"></script>
 
-    .katex-version::after {
-        content: "0.10.2 or earlier";
-    }
-</style>
-<span class="katex">
-    <span class="katex-mathml">The KaTeX stylesheet is not loaded!</span>
-    <span class="katex-version rule">KaTeX stylesheet version: </span>
-</span><h1>Maxwell's Equations</h1>
+<!-- Distill title -->
+<script type="text/front-matter">
+    title: "Tab title"
+    description: ""
+</script>
+
+<body>
+    <dt-article>
+        <dt-byline class="l-page transparent"></dt-byline>
+        <h1>Article title</h1>
+        <p></p>
+        <dt-byline class="l-page" id="authors_section" hidden>
+            <div class="byline">
+                <div class="authors">
+                    <div class="author">
+                        <a class="name" href="https://github.com">First author</a>
+                        <a class="affiliation">Affiliation 1</a>
+                    </div>
+                    <div class="author">
+                        <a class="name" href="https://github.com">Second author</a>
+                        <a class="affiliation">Affiliation 2</a>
+                    </div>
+                    <div class="author">
+                        <a class="name" href="https://github.com">Last author</a>
+                        <a class="affiliation">Affiliation 3</a>
+                    </div>
+                </div>
+                <div class="date">
+                    <div class="month">Month day</div>
+                    <div class="year">Year</div>
+                </div>
+                <div class="date">
+                    <div class="month">Download</div>
+                    <div class="year hyperlink"><a href="https://arxiv.org/" target="_blank">PDF</a>
+                    </div>
+                </div>
+                <div class="date">
+                    <div class="month">Conference<dt-fn>Details of conference
+                        </dt-fn>
+                    </div>
+                    <div class="year hyperlink"><a href="https://github.com" target="_blank">Poster</a>
+                    </div>
+                </div>
+            </div>
+        </dt-byline><h2>Hello World</h2>
+<h3>Maxwell's equations</h3>
 <table>
 <thead>
 <tr>
@@ -51,13 +92,34 @@
 <td>divergence of $\vec{\mathbf{B}}$ is zero</td>
 </tr>
 <tr>
-<td>$\nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t}  = \vec{\mathbf{0}}$</td>
+<td>$\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t}  = \vec{\mathbf{0}}$</td>
 <td>curl of $\vec{\mathbf{E}}$ is proportional to the rate of change of $\vec{\mathbf{B}}$</td>
 </tr>
 <tr>
-<td>$\nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} = \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} = 4 \pi \rho$</td>
+<td>$\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} = \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} = 4 \pi \rho$</td>
 <td><em>wha?</em></td>
 </tr>
 </tbody>
 </table>
-<p><img src="http://i.giphy.com/Gty2oDYQ1fih2.gif" alt="electricity"></p>
+<p><img alt="electricity" src="http://i.giphy.com/Gty2oDYQ1fih2.gif" /></p>
+<p>We can also cite <dt-cite key="lecun1989backpropagation"></dt-cite> external publications.</p></dt-article><dt-appendix>
+<h2>Acknowledgements</h2>
+<p>Thanks, grants.</p>
+<p>BibTex citation</p>
+<h2>Open Source Code</h2>
+<p>Link to <a href="https://github.com">repo</a>.</p>
+<h2>Appendix</h2></dt-appendix>
+</body>
+
+<script type="text/bibliography">
+  @article{lecun1989backpropagation,
+    author={LeCun, Y. and Boser, B. and Denker, J. S. and Henderson, D. and Howard, R. E. and Hubbard, W. and Jackel, L. D.},
+    journal={Neural Computation},
+    title={Backpropagation Applied to Handwritten Zip Code Recognition},
+    year={1989},
+    volume={1},
+    number={4},
+    pages={541-551},
+    doi={10.1162/neco.1989.1.4.541}
+  }
+</script>
